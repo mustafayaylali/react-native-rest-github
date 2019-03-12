@@ -39,7 +39,7 @@ export default class SearchComponent extends Component {
             }
           else {
           
-            
+            this.textInput.clear()
             this.setState({
               error: false,
               username: ''
@@ -70,7 +70,7 @@ export default class SearchComponent extends Component {
         <TextInput
               style={styles.searchInput}
               onChange={this.handleChange}
-              
+              ref={input => { this.textInput = input }}
             />
         <TouchableHighlight
                 style = {styles.button}
